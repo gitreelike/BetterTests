@@ -1,0 +1,70 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+buildscript {
+    ext.kotlin_version = '1.0.4'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'kotlin'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile 'javax.enterprise:cdi-api:1.2'
+    compile 'com.google.guava:guava:19.0'
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+
+    // Abhängigkeiten für Spock (Groovy)
+    testCompile 'org.codehaus.groovy:groovy-all:2.4.7'
+    testCompile "org.spockframework:spock-core:1.1-groovy-2.4-rc-2"
+
+    testCompile 'org.needle4j:needle4j:2.3'
+
+    // Abhängigkeiten für JUnit/Mockito/AssertJ (Java und Kotlin)
+    testCompile 'junit:junit:4.12'
+    testCompile 'cglib:cglib-nodep:3.2.4'
+    testCompile 'org.assertj:assertj-core:3.5.2'
+    testCompile 'org.mockito:mockito-core:2.1.0'
+
+    // Spock Test reports
+    testRuntime 'com.athaydes:spock-reports:1.2.13'
+
+    // Kotlin
+    testCompile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+
+    // Kotlin spezifische AssertJ und Mockito Versionen
+    testCompile 'net.wuerl.kotlin:assertj-core-kotlin:0.1.2'
+    testCompile "com.nhaarman:mockito-kotlin:0.7.0"
+
+    // JPA Tests
+    testCompile 'org.hibernate:hibernate-entitymanager:5.2.3.Final'
+    testCompile 'org.hibernate:hibernate-validator:5.2.3.Final'
+    testCompile 'org.jglue.cdi-unit:cdi-unit:3.1.4'
+    testCompile 'org.hsqldb:hsqldb:2.3.4'
+
+    // Logging Config (Hibernate)
+    testCompile 'ch.qos.logback:logback-classic:1.1.7'
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+
+        showStackTraces = false
+    }
+}
