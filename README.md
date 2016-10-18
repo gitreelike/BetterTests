@@ -24,9 +24,9 @@ mache dich mit der Konfiguration und dem Aufbau eines einfachen Tests vertraut.
 Ex10: Testfokus (Protagonist)
 -----------------------------
 
-> Wer von einer Tragödie erzählen kann, war nicht ihr Held
+> Wer von einer Tragödie erzählen kann, war nicht ihr _Held_
 
-es sollte leicht nachvollziehbar sein, was im Fokus des Test steht
+es sollte leicht nachvollziehbar sein, wer oder was im Fokus des Test steht
 
 - kurze Diskussion mit Partner
 
@@ -53,6 +53,7 @@ the test fail_).
 
 - wie bewertest du die Assertion APIs hinsichtlich Fehlermeldung, 
     Lesbarkeit, Erweiterbarkeit und Wiederverwendbarkeit?
+- * @Ignore/Test assumptions
   
 Ex30: Collaboration
 -------------------
@@ -74,6 +75,13 @@ Ex31: Overspecified Tests
 - erweitere die Implementierung.
 - Bewertung?
 
+Ex32: Ugly Mocking
+------------------
+
+> Mock only types you own
+
+- bewerte und diskutiere den Test und die Empfehlung
+
 Ex40: Testdaten
 ---------------
 
@@ -90,7 +98,7 @@ Ex50: listen to the tests
 Ex60: Integration Tests
 -----------------------
 
->
+> does it really work?
 
 - funktioniert mein code mit 3rd Party Code, Frameworks, Drittsystemen?
 
@@ -101,6 +109,10 @@ Ex70: Test Environment
 
 für den Test benötigte Ressourcen bilden die Kulisse. Gutes Setup
 ist vom eingentlichen Test klar getrennt und ggfs. wiederverwendbar
+
+Ex80: Ui Tests mit WebDriver (Geb/Fluentlentium)
+------------------------------------------------
+
 
 
 
