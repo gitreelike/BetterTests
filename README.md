@@ -42,6 +42,14 @@ Methoden.
 - schau dir das Beispiel an und erkenne den Zusammenhang zwischen den beiden
 Methoden des getesteten Objekts.
 
+Ex11: interaction based testing
+-------------------------------
+
+> Object-oriented design is the process of planning a system of interacting 
+> objects for the purpose of solving a software problem.
+
+- schau dir im Beispiel verschiedene Methoden an Interaktionen zwischen Objekten zu testen
+
 Ex20: Testassertions
 --------------------
 
@@ -53,7 +61,8 @@ the test fail_).
 
 - wie bewertest du die Assertion APIs hinsichtlich Fehlermeldung, 
     Lesbarkeit, Erweiterbarkeit und Wiederverwendbarkeit?
-- * @Ignore/Test assumptions
+
+* @Ignore/Test assumptions sind Ausnahmen
   
 Ex30: Collaboration
 -------------------
@@ -75,8 +84,8 @@ Ex31: Overspecified Tests
 - erweitere die Implementierung.
 - Bewertung?
 
-Ex32: Ugly Mocking
-------------------
+Ex32: Bad Mocking
+-----------------
 
 > Mock only types you own
 
@@ -85,15 +94,26 @@ Ex32: Ugly Mocking
 Ex40: Testdaten
 ---------------
 
-- komplexe Testdaten
-- welche Daten sind relevant?
+> komplexe Testdaten
 
+- welche Daten sind relevant? wie gut lässt sich das erkennen?
 
 Ex50: listen to the tests
 -------------------------
 
-- ist es schlecht zu testen dann ist es vielleicht 
-    auch schlecht zu benutzen?
+> ist es schlecht zu testen dann ist es vielleicht 
+>    auch schlecht zu benutzen?
+
+- was lässt sich anhand der Tests über den Code aussagen?
+- wie kann der Code verändert werden?
+- welche Effekte hat das auf den Test?
+
+Ex51: more than one test
+------------------------
+
+> keine Kontrollstrukturen in Tests
+
+- parametrisierbare Tests
     
 Ex60: Integration Tests
 -----------------------
@@ -112,6 +132,17 @@ ist vom eingentlichen Test klar getrennt und ggfs. wiederverwendbar
 
 Ex80: Ui Tests mit WebDriver (Geb/Fluentlentium)
 ------------------------------------------------
+
+funktioniert aktuell nicht in gradle. Ursache unbekannt
+
+Ex90: Coverage
+--------------
+
+Erzeuge einen Coverage Report mit Gradle
+`./gradlew  test --tests "ex10*" jacocoTestReport`
+
+Öffne den Coverage Report
+`open build/jacocoHtml/index.html`
 
 
 

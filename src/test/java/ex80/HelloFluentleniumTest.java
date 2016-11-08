@@ -9,8 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 
 @Wait
 public class HelloFluentleniumTest extends FluentTest {
@@ -19,7 +19,9 @@ public class HelloFluentleniumTest extends FluentTest {
     public WebDriver newWebDriver() {
         ChromeDriverManager.getInstance().setup();
 
-        return new ChromeDriver();
+        ChromeDriver driver = new ChromeDriver();
+
+        return driver;
     }
 
     @Test

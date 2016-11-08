@@ -21,7 +21,7 @@ class TestEntityRepositorySpec extends Specification {
         sut.entityManager = em
     }
 
-    def uglyTest() {
+    def badMockTest() {
         given:
         em.createQuery("FROM TestEntity t WHERE t.name = :name", TestEntity.class) >> query
         query.setParameter('name', 'myName') >> query
@@ -31,7 +31,7 @@ class TestEntityRepositorySpec extends Specification {
         sut.findByName('myName')
     }
 
-    def uglyToo() {
+    def badToo() {
         given:
         em.createQuery(_, _) >> query
         query.setParameter(_, _) >> query

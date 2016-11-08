@@ -13,7 +13,6 @@ public class LawOfDemeterTest {
 
     @Test
     public void canDeepStubOldWay() throws Exception {
-
         ServiceB mockB = mock(ServiceB.class);
 
         sut.serviceA = mock(ServiceA.class);

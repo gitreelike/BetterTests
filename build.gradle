@@ -20,9 +20,9 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'kotlin'
+apply plugin: "jacoco"
 
 sourceCompatibility = 1.8
-
 
 dependencies {
     compile 'javax.enterprise:cdi-api:1.2'
@@ -72,6 +72,8 @@ dependencies {
 
     // Logging Config (Hibernate)
     testCompile 'ch.qos.logback:logback-classic:1.1.7'
+
+    testCompile 'pl.pragmatists:JUnitParams:1.0.5'
 }
 
 test {
@@ -79,5 +81,12 @@ test {
         exceptionFormat = 'full'
 
         showStackTraces = false
+    }
+}
+
+jacocoTestReport {
+    reports {
+        html.enabled true
+        html.destination "${buildDir}/jacocoHtml"
     }
 }

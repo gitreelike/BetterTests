@@ -12,6 +12,7 @@ import java.util.List;
 public class FluentGooglePage extends FluentPage {
 
     public void search(String term) {
+        System.out.println("Search for " + term);
         $(By.name("q")).write(term + "\n");
     }
 
