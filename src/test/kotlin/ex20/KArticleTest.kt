@@ -7,12 +7,12 @@ import org.assertj.core.api.KotlinAssertions.assertThat
 
 class KArticleTest {
     @Test
-    fun articleMustBeNamedJunit() {
+    fun `article must be named (Junit)`() {
         assertNotNull(Article(null, 10).name)
     }
 
     @Test
-    fun articleMustBeNamedAssertJ() {
+    fun `article must be named (AssertJ)`() {
         assertThat(Article(null, 10).name).isNotNull()
     }
 }
