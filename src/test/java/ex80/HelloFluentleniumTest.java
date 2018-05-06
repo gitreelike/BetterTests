@@ -30,7 +30,7 @@ public class HelloFluentleniumTest extends FluentTest {
 
         $(By.name("q")).write("junit\n");
 
-        assertThat($("#search .g .r")).hasText("JUnit - About");
+        assertThat($("#search .g .r")).hasText("JUnit");
     }
 
     @Page
@@ -42,6 +42,6 @@ public class HelloFluentleniumTest extends FluentTest {
 
         page.search("junit");
 
-        assertThat(page.results()).contains("JUnit - About");
+        assertThat(page.results()).contains("JUnit 5");
     }
 }
