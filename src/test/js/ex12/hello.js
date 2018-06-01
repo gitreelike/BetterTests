@@ -1,0 +1,1 @@
+export const hello = (name) => `Hello ${name} at ${new Date()}`;

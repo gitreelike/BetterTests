@@ -67,6 +67,7 @@ class InteractionSpec extends Specification {
     class FakeSmsService implements SmsService {
         @Override
         void send(String msg) {
+            println msg
         }
     }
 }

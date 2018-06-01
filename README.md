@@ -42,7 +42,7 @@ Methoden.
 - schau dir das Beispiel an und erkenne den Zusammenhang zwischen den beiden
 Methoden des getesteten Objekts.
 
-Ex11: interaction based testing
+Ex12: interaction based testing
 -------------------------------
 
 > Object-oriented design is the process of planning a system of interacting 
