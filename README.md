@@ -135,16 +135,3 @@ Ex80: Ui Tests mit WebDriver (Geb/Fluentlentium)
 
 funktioniert aktuell nicht in gradle. Ursache unbekannt
 
-Ex90: Coverage
---------------
-
-Erzeuge einen Coverage Report mit Gradle
-`./gradlew  test --tests "ex10*" jacocoTestReport`
-
-Öffne den Coverage Report
-`open build/jacocoHtml/index.html`
-
-
-
-
-

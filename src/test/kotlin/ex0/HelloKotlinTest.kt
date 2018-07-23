@@ -10,5 +10,4 @@ class HelloKotlinTest {
         
         assertEquals("hello kotlin", actual)
     }
-
 }

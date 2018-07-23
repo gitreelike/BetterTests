@@ -1,0 +1,1 @@
+export const hello = (name) => `Fake Hello with fixed Date 2018-01-01`;
