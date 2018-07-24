@@ -4,9 +4,9 @@ Better Tests
 Allgemeines
 -----------
 
-Beispiele mit JUnit (Kotlin und Java) und Spock (Groovy). 
+Beispiele mit JUnit (Kotlin und Java), Spock (Groovy) und jest (JS). 
 
-Projekt bauen und Tests ausführen: `./gradlew test`
+Projekt bauen und Tests ausführen: `./gradlew check`
 
 alle Tests aus einem Package ausführen (am Beispiel vom package _ex0_): `./gradlew test --tests "ex0*"`
 
@@ -134,4 +134,3 @@ Ex80: Ui Tests mit WebDriver (Geb/Fluentlentium)
 ------------------------------------------------
 
 funktioniert aktuell nicht in gradle. Ursache unbekannt
-
