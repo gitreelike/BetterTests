@@ -52,8 +52,6 @@ dependencies {
     testCompile 'org.codehaus.groovy:groovy-all:2.5.1'
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
 
-    testCompile 'org.needle4j:needle4j:2.3'
-
     // Abhängigkeiten für JUnit/Mockito/AssertJ (Java und Kotlin)
     testCompile 'junit:junit:4.12'
     testCompile 'cglib:cglib-nodep:3.2.6'
