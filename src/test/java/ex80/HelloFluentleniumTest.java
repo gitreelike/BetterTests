@@ -2,6 +2,7 @@ package ex80;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.fluentlenium.adapter.junit.FluentTest;
+import org.fluentlenium.core.hook.wait.Wait;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 
+@Wait
 public class HelloFluentleniumTest extends FluentTest {
 
     @Override
