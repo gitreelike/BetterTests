@@ -12,22 +12,26 @@ import java.util.List;
 import static org.fluentlenium.assertj.FluentLeniumAssertions.assertThat;
 
 @PageUrl("http://www.google.de")
-public class FluentGooglePage extends FluentPage {
+public class NiceFluentGooglePage extends FluentPage {
 
-    public FluentGooglePage search(String term) {
+    @FindBy(name = "q")
+    FluentList<FluentWebElement> searchField;
+
+    @FindBy(name = "btnK")
+    FluentList<FluentWebElement> findButton;
+
+    @FindBy(css = "#search .g .r")
+    FluentList<FluentWebElement> resultElements;
+
+    public NiceFluentGooglePage search(String term) {
         System.out.println("Search for " + term);
-        $(By.name("q"))
-                .write(term)
-                .submit();
+        searchField.write(term);
+        findButton.submit();
 
         return this;
     }
 
-    public FluentList<FluentWebElement> result() {
-        return $("#search .g .r");
-    }
-
     public void assertHasResult(String resultText) {
-        assertThat(result()).hasText(resultText);
+        assertThat(resultElements).hasText(resultText);
     }
 }
